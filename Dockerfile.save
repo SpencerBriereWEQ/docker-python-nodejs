@@ -35,4 +35,4 @@ RUN \
   cd ~/.aws && \
   cat credentials
 
-RUN echo "export NODE_OPTIONS=--max-old-space-size=4094" >> ~/.bashrc
+Run echo "" >> ~/.bashrcJavaScript heap out of memory
