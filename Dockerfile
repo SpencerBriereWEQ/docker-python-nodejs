@@ -1,4 +1,4 @@
-FROM python:stretch
+FROM python:3.6-stretch
 MAINTAINER Nikolai R Kristiansen <nikolaik@gmail.com>
 
 # Install node prereqs, nodejs and yarn
@@ -31,8 +31,6 @@ COPY credentials /tmp/credentials
 
 RUN \
   mv /tmp/config ~/.aws/config && \
-  mv /tmp/credentials ~/.aws/credentials && \
-  cd ~/.aws && \
-  cat credentials
+  mv /tmp/credentials ~/.aws/credentials
 
 RUN echo "export NODE_OPTIONS=--max-old-space-size=4094" >> ~/.bashrc
